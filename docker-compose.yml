@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=drones4all
+      - MYSQL_ROOT_PASSWORD=TM1q2w3e.
+      - MYSQL_ROOT_HOST=%
+    volumes:
+      - ./mysql:/var/lib/mysql
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+
+  php:
+    image: soulless32/prueba:php54-1
+    volumes:
+      - ./code/:/var/www/html
+    expose:
+      - 80
+    ports:
+      - 80:80
+    links:
+      - mysql
+

@@ -14,6 +14,7 @@ pipeline {
 		stage('Construir imagen'){
 			steps{
 				sh 'sudo docker build --tag=php54local .'
+				sh 'sudo docker images|grep php54local'
 			}
 		}
 	}

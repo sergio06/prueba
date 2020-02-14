@@ -11,5 +11,10 @@ pipeline {
 				sh 'sudo docker ps'
 			}
 		}
+		stage('Construir imagen'){
+			steps{
+				sh 'sudo docker build --tag=php54local .'
+			}
+		}
 	}
 }

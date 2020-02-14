@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage('Desplegar docker-compose'){
 			steps{
-				sh 'sudo docker-compose up'
+				sh 'sudo docker-compose up -d'
 			}
 		}
 	}

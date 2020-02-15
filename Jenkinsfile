@@ -23,5 +23,10 @@ pipeline {
 				sh 'sudo docker-compose up -d'
 			}
 		}
+		stage('curl'){
+			steps{
+				sh 'curl localhost'
+			}
+		}
 	}
 }

@@ -21,7 +21,7 @@ services:
     expose:
       - 88
     ports:
-      - 88
+      - 88:88
     links:
       - mysql
 

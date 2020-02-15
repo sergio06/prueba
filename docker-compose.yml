@@ -10,18 +10,18 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
     expose:
-      - 3305
+      - 3304
     ports:
-      - 3305:3305
+      - 3304:3304
 
   php:
     image: soulless32/prueba:php54-1
     volumes:
       - ./code/:/var/www/html
     expose:
-      - 80
+      - 880
     ports:
-      - 80:80
+      - 880:880
     links:
       - mysql
 

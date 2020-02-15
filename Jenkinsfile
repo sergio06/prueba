@@ -25,7 +25,7 @@ pipeline {
 		}
 		stage('curl'){
 			steps{
-				sh 'curl localhost'
+				sh 'curl localhost:88'
 			}
 		}
 	}
